@@ -1,0 +1,11 @@
+#!/bin/bash
+INPUT='{"a":"b"}'
+INPUT_LEN=${#INPUT}
+
+echo "INPUT: $INPUT"
+echo "INPUT_LEN: $INPUT_LEN"
+
+for i in $(seq 0 $((INPUT_LEN-1)));
+do
+  echo "i=$i, chat=${INPUT:$i:1}"
+done
